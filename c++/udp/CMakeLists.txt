@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.8)
+project(udp_cmake CXX)
+
+set(Boost_USE_STATIC_LIBS ON)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost REQUIRED thread)
+if(Boost_FOUND)
+    message(STATUS "!!! BOOST FOUND !!!")
+else()
+    message(STATUS "!!! BOOST NOT FOUND !!!")
+endif()
+
+ADD_EXECUTABLE(udp udp.cpp)
+TARGET_LINK_LIBRARIES(udp ${Boost_LIBRARIES})
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
