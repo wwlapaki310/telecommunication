@@ -1,7 +1,7 @@
 # transport_code
 
 
-c++コンパイルメモ
+#c++コンパイルメモ
 g++ -I /usr/local/include test.cpp -o test
 
 g++ -I /usr/local/include -L/usr/local/lib -lboost_system udp.cpp -o udp
