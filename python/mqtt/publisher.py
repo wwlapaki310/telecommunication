@@ -30,9 +30,11 @@ def main():
   client.loop_start()    # subはloop_forever()だが，pubはloop_start()で起動だけさせる
 
   # 永久に繰り返す
+  i=0
   while True:
-    client.publish("drone/001","Hello, Drone!")    # トピック名とメッセージを決めて送信
+    client.publish("drone/001","Hello, Drone"+str(i))    # トピック名とメッセージを決めて送信
     sleep(3)   # 3秒待つ
+    i=i+1
 
 if __name__ == '__main__':          # importされないときだけmain()を呼ぶ
   main()    # メイン関数を呼び出す

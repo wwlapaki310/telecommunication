@@ -8,3 +8,5 @@ c++/tcp/CMakeFiles
 c++/tcp/cmake_install.cmake
 c++/tcp/CMakeCache.txt
 c++/tcp/tcp
+
+python/trans/
